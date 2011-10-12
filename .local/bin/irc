@@ -1,0 +1,3 @@
+#!/bin/zsh
+~/.local/bin/growl_irc.sh
+ssh enlil
