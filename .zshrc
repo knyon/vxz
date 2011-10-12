@@ -5,11 +5,13 @@
 # 
 ######################################################################
 
-#xset r rate 300 50
-#source /etc/zsh_command_not_found
+xset r rate 300 50
 set -o vi
 source $HOME/.local/bin/bashmarks.sh
 cd $HOME
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 
 # next lets set some enviromental/shell pref stuff up
 # setopt NOHUP
@@ -200,5 +202,4 @@ zstyle ':completion:*:ssh:*' tag-order \
 zstyle ':completion:*:ssh:*' group-order \
    hosts-domain hosts-host users hosts-ipaddr
 zstyle '*' single-ignored show
-
 set +B
