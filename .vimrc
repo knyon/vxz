@@ -2,8 +2,9 @@
 "Stolen from http://vi-improved.org/vimrc.php
 "And from http://spf13.com/post/ultimate-vim-config (Sept 14, 2010)
 
-call pathogen#infect()
 set nocompatible
+call pathogen#infect()
+
 colorscheme molokai
 noremap ;; :%s:\v::<Left><Left>
 noremap ;l :%s:::<Left>
@@ -16,7 +17,7 @@ let NERDTreeShowBookmarks=1
 let NERDTreeWinSize=40
 let Tlist_WinWidth=30
 let Tlist_GainFocus_On_ToggleOpen=1
-let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+let Tlist_Ctags_Cmd='/usr/bin/ctags'
 let g:miniBufExplMapWindowNavVim = 1 
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
