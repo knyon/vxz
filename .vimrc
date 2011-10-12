@@ -3,7 +3,35 @@
 "And from http://spf13.com/post/ultimate-vim-config (Sept 14, 2010)
 
 set nocompatible
-call pathogen#infect()
+filetype off
+
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" Personal bundles
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'gerw/vim-latex-suite'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/camelcasemotion'
+Bundle 'vim-scripts/tlib'
+Bundle 'vim-scripts/delimitMate.vim'
+Bundle 'vim-scripts/Gundo'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/scratch.vim'
+Bundle 'vim-scripts/vimwiki'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'ervandew/supertab'
+Bundle 'mikewest/vimroom'
+Bundle 'git://git.wincent.com/command-t.git'
+
 
 colorscheme molokai
 noremap ;; :%s:\v::<Left><Left>
@@ -24,8 +52,7 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1 
 
 syntax on
-filetype plugin on
-filetype indent on   "Automatically detect file types
+filetype plugin indent on
 
 "set grepprg=grep\ -nH\ $*   "Added For LaTex Suite
 let g:tex_flavor='latex'
