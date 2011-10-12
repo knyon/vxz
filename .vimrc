@@ -12,6 +12,7 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+"set path+=~/Documents/dsc/**
 " Personal bundles
 
 Bundle 'tpope/vim-fugitive'
@@ -27,7 +28,7 @@ Bundle 'vim-scripts/Gundo'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/scratch.vim'
 Bundle 'vim-scripts/vimwiki'
-Bundle 'fholgado/minibufexpl.vim'
+"Bundle 'fholgado/minibufexpl.vim'
 Bundle 'ervandew/supertab'
 Bundle 'mikewest/vimroom'
 Bundle 'git://git.wincent.com/command-t.git'
@@ -46,10 +47,18 @@ let NERDTreeWinSize=40
 let Tlist_WinWidth=30
 let Tlist_GainFocus_On_ToggleOpen=1
 let Tlist_Ctags_Cmd='/usr/bin/ctags'
+let Tlist_Compact_Format = 1
 let g:miniBufExplMapWindowNavVim = 1 
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1 
+
+" Syntastic settings
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_enable_signs=1
+"let g:syntastic_auto_loc_list=1
 
 syntax on
 filetype plugin indent on
@@ -107,6 +116,10 @@ nnoremap <leader><space> :noh<CR>
 inoremap jj <esc>
 nnoremap <leader>rc <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 vmap > >gv
 vmap < <gv
 nnoremap Y y$
