@@ -18,6 +18,7 @@
 import XMonad
 import Data.Monoid
 import System.Exit
+import XMonad.Hooks.SetWMName
  
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -293,7 +294,7 @@ myLogHook = return ()
 -- It will add initialization of EWMH support to your custom startup
 -- hook by combining it with ewmhDesktopsStartup.
 --
-myStartupHook = return ()
+myStartupHook = setWMName "LG3D"
  
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
