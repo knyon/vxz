@@ -12,26 +12,28 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-"set path+=~/Documents/dsc/**
+set path+=~/Documents/dsc/**
 " Personal bundles
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'gerw/vim-latex-suite'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/camelcasemotion'
-Bundle 'vim-scripts/tlib'
-Bundle 'vim-scripts/delimitMate.vim'
-Bundle 'vim-scripts/Gundo'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'vim-scripts/scratch.vim'
-Bundle 'vim-scripts/vimwiki'
 "Bundle 'fholgado/minibufexpl.vim'
 Bundle 'ervandew/supertab'
-Bundle 'mikewest/vimroom'
+Bundle 'gerw/vim-latex-suite'
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'mikewest/vimroom'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'vim-scripts/Gundo'
+Bundle 'vim-scripts/camelcasemotion'
+Bundle 'vim-scripts/delimitMate.vim'
+Bundle 'vim-scripts/localrc.vim'
+Bundle 'vim-scripts/scratch.vim'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/tlib'
+Bundle 'vim-scripts/vimwiki'
 
 
 colorscheme molokai
@@ -62,6 +64,9 @@ let g:miniBufExplModSelTarget = 1
 
 syntax on
 filetype plugin indent on
+set hidden
+set nobackup
+set noswapfile
 
 "set grepprg=grep\ -nH\ $*   "Added For LaTex Suite
 let g:tex_flavor='latex'
@@ -116,10 +121,10 @@ nnoremap <leader><space> :noh<CR>
 inoremap jj <esc>
 nnoremap <leader>rc <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>w <C-w>v<C-w>l
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 vmap > >gv
 vmap < <gv
 nnoremap Y y$
